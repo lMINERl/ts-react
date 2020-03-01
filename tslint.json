@@ -20,7 +20,8 @@
     "callable-types": true,
     "prefer-method-signature": false,
     "no-irregular-whitespace": true,
-    "no-empty-interface": true
+    "no-empty-interface": true,
+    "no-shadowed-variable": true
   },
   "rulesDirectory": []
 }

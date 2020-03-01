@@ -1,9 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { shallow, Provider, myStore } from '../test/Configurations';
 import App from './App';
 
 test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const wrapper = shallow(
+    <Provider store={myStore}>
+      <App />
+    </Provider>
+  );
+  expect(wrapper).toMatchSnapshot();
 });
